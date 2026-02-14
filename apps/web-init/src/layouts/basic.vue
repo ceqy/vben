@@ -18,6 +18,7 @@ import { preferences } from '@vben/preferences';
 import { useAccessStore, useUserStore } from '@vben/stores';
 import { openWindow } from '@vben/utils';
 
+import MenuSearch from '#/components/menu-search.vue';
 import { $t } from '#/locales';
 import { useAuthStore } from '#/store';
 import LoginForm from '#/views/_core/authentication/login.vue';
@@ -190,6 +191,9 @@ watch(
         @remove="(item) => item.id && remove(item.id)"
         @make-all="handleMakeAll"
       />
+    </template>
+    <template #toolbar-left>
+      <MenuSearch />
     </template>
     <template #extra>
       <AuthenticationLoginExpiredModal

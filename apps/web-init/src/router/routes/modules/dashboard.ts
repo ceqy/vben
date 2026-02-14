@@ -33,6 +33,17 @@ const routes: RouteRecordRaw[] = [
       },
     ],
   },
+  // ERP 工作台（动态模式）
+  {
+    meta: {
+      icon: 'lucide:grid-3x3',
+      order: 0,
+      title: 'ERP 工作台',
+    },
+    name: 'ERPWorkspace',
+    path: '/',
+    component: () => import('#/views/workspace/index.vue'),
+  },
 ];
 
 export default routes;
